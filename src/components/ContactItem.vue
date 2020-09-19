@@ -46,6 +46,7 @@ export default {
     border: none;
     font-weight: bold;
     padding: 5px 20px;
+    cursor: pointer;
 
       &:focus {
         outline: none;
