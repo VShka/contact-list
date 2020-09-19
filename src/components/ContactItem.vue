@@ -9,10 +9,15 @@
     </span>
 
     <div class="control-container">
-      <button class="button button_detail">
-      Подробно
+      <button
+        class="button button_detail"
+      >
+        Подробно
       </button>
-      <button class="button button_delete">
+      <button
+        class="button button_delete"
+        v-on:click="$emit('remove-contact', contact.id)"
+      >
         Удалить
       </button>
     </div>

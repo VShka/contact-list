@@ -6,6 +6,7 @@
     <AddContact @add-contact="addContact" />
     <ContactList 
       :contacts="contacts"
+      @remove-contact="removeContact"
     />
     <!-- <router-link to="/about" class="link">Подробнее</router-link> -->
   </section>
@@ -20,9 +21,9 @@ export default {
   data() {
     return {
       contacts: [
-        {name: 'Victor'},
-        {name: 'Victor'},
-        {name: 'Victor'}
+        {id: 1, name: 'Victor'},
+        {id: 2, name: 'Victor'},
+        {id: 3, name: 'Victor'}
       ]
     }
   },
@@ -33,6 +34,9 @@ export default {
   methods: {
     addContact(contact) {
       this.contacts.push(contact);
+    },
+    removeContact(id) {
+      this.contacts = this.contacts.filter( contact => contact.id !== id);
     }
   }
 }

@@ -5,6 +5,7 @@
       :contact="contact"
       :index="i"
       :key="contact"
+      @remove-contact="removeContact"
     />
   </ul>
 </template>
@@ -15,6 +16,11 @@ export default {
   props: ['contacts'],
   components: {
     ContactItem
+  },
+  methods: {
+    removeContact(id) {
+      this.$emit('remove-contact', id);
+    }
   }
 }
 </script>
