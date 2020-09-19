@@ -36,7 +36,11 @@ export default {
       this.contacts.push(contact);
     },
     removeContact(id) {
-      this.contacts = this.contacts.filter( contact => contact.id !== id);
+      const confirm = window.confirm("Точно удалить контакт?");
+      
+      if (confirm) {
+        this.contacts = this.contacts.filter( contact => contact.id !== id);
+      }
     }
   }
 }
