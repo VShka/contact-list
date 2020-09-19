@@ -4,13 +4,8 @@
     <h1>Список ваших контактов</h1>
     <hr>
     <AddContact />
-    <ul class="contact-list">
-      <li
-        v-for="contact in contacts"
-        :contact="contact"
-        :key="contact.id"
-      ></li>
-    </ul>
+    <hr>
+    <ContactList />
     <router-link to="/about" class="link">Подробнее</router-link>
   </section>
 
@@ -18,6 +13,7 @@
 
 <script>
 import AddContact from '@/components/AddContact';
+import ContactList from '@/components/ContactList';
 
 export default {
   data() {
@@ -30,7 +26,8 @@ export default {
     }
   },
   components: {
-    AddContact
+    AddContact,
+    ContactList
   }
 }
 
