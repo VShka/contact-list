@@ -1,5 +1,10 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <section class="about">
+    <h2>Детальная информация о контакте</h2>
+    <router-link to="/" class="link">На страницу контактов</router-link>
+  </section>
 </template>
+
+<style lang="scss" scoped>
+
+</style>
