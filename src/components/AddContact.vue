@@ -1,6 +1,11 @@
 <template>
-  <form class="form">
-    <input type="text" placeholder="Введите имя контакта" class="form__input">
+  <form class="form" @submit.prevent="onSubmit">
+    <input
+      type="text"
+      placeholder="Введите имя контакта"
+      class="form__input"
+      v-model="name"
+    >
     <button type="submit" class="form__button">Добавить</button>
   </form>
 </template>
@@ -9,7 +14,19 @@
 export default {
   data() {
     return {
-      name: null
+      name: ''
+    }
+  },
+  methods: {
+    onSubmit() {
+      if (this.name.trim()) {
+        const newContact = {
+          name: this.name
+        };
+
+        this.$emit('add-contact', newContact);
+        this.name = '';
+      };
     }
   }
 }

@@ -3,7 +3,7 @@
   <section>
     <h1>Список ваших контактов</h1>
     <hr>
-    <AddContact />
+    <AddContact @add-contact="addContact" />
     <ContactList 
       :contacts="contacts"
     />
@@ -20,15 +20,20 @@ export default {
   data() {
     return {
       contacts: [
-        {id: 1, name: 'Victor'},
-        {id: 1, name: 'Victor'},
-        {id: 1, name: 'Victor'}
+        {name: 'Victor'},
+        {name: 'Victor'},
+        {name: 'Victor'}
       ]
     }
   },
   components: {
     AddContact,
     ContactList
+  },
+  methods: {
+    addContact(contact) {
+      this.contacts.push(contact);
+    }
   }
 }
 

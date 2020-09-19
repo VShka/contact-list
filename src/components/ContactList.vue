@@ -4,7 +4,7 @@
       v-for="(contact, i) in contacts"
       :contact="contact"
       :index="i"
-      :key="contact.id"
+      :key="contact"
     />
   </ul>
 </template>
