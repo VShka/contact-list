@@ -4,9 +4,10 @@
     <h1>Список ваших контактов</h1>
     <hr>
     <AddContact />
-    <hr>
-    <ContactList />
-    <router-link to="/about" class="link">Подробнее</router-link>
+    <ContactList 
+      :contacts="contacts"
+    />
+    <!-- <router-link to="/about" class="link">Подробнее</router-link> -->
   </section>
 
 </template>
