@@ -21,8 +21,8 @@ export default {
     return {
       contacts: [
         {id: 1, name: 'Victor', surname: '', email: '', tel: Number},
-        {id: 2, name: 'Victor', surname: '', email: '', tel: Number},
-        {id: 3, name: 'Victor', surname: '', email: '', tel: Number}
+        {id: 2, name: 'Polina', surname: '', email: '', tel: Number},
+        {id: 3, name: 'Bruno', surname: '', email: '', tel: Number}
       ]
     }
   },

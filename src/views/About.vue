@@ -5,6 +5,13 @@
   </section>
 </template>
 
+<script>
+// export default {
+//   name: 'About',
+//   props: ['items']
+// };
+</script>
+
 <style lang="scss" scoped>
 
 </style>
