@@ -12,7 +12,7 @@
       <button
         class="button button_detail"
       >
-        Подробно
+        <router-link to="/about" class="link">Подробнее</router-link>
       </button>
       <button
         class="button button_delete"
@@ -51,6 +51,10 @@ export default {
       &:focus {
         outline: none;
         box-shadow: 0 0 10px rgba(13, 19, 16, 0.7);
+      }
+      
+      .link {
+        color: #fff;
       }
     }
 

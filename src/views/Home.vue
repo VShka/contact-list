@@ -8,7 +8,6 @@
       :contacts="contacts"
       @remove-contact="removeContact"
     />
-    <!-- <router-link to="/about" class="link">Подробнее</router-link> -->
   </section>
 
 </template>
