@@ -1,9 +1,6 @@
-import Vue from 'vue/dist/vue.cjs';
-import Vuex from 'vuex';
+import { createStore } from 'vuex'
 
-Vue.use(Vuex);
-
-export default new Vuex.Store({
+export default createStore({
   state: {
     contacts: [
       {id: 1, name: 'Victor', surname: '', email: '', tel: Number},
@@ -11,7 +8,6 @@ export default new Vuex.Store({
       {id: 3, name: 'Bruno', surname: '', email: '', tel: Number}
     ]
   },
-  getters: {},
   mutations: {
     addContact(contact) {
       state.contacts.push(contact);
@@ -24,5 +20,8 @@ export default new Vuex.Store({
       }
     }
   },
-  actions: {}
+  actions: {
+  },
+  modules: {
+  }
 })

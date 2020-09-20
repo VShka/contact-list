@@ -3,9 +3,6 @@
 </template>
 
 <script>
-export default {
-  store
-}
 </script>
 
 <style lang="scss">
