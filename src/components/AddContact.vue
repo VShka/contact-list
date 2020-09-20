@@ -22,7 +22,10 @@ export default {
       if (this.name.trim()) {
         const newContact = {
           id: Date.now(),
-          name: this.name
+          name: this.name,
+          surname: '',
+          email: '',
+          tel: Number
         };
 
         this.$emit('add-contact', newContact);

@@ -20,9 +20,9 @@ export default {
   data() {
     return {
       contacts: [
-        {id: 1, name: 'Victor'},
-        {id: 2, name: 'Victor'},
-        {id: 3, name: 'Victor'}
+        {id: 1, name: 'Victor', surname: '', email: '', tel: Number},
+        {id: 2, name: 'Victor', surname: '', email: '', tel: Number},
+        {id: 3, name: 'Victor', surname: '', email: '', tel: Number}
       ]
     }
   },
