@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d22d746"],{f820:function(t,n,s){"use strict";s.r(n);var e=function(){var t=this,n=t.$createElement,s=t._self._c||n;return s("section",{staticClass:"about"},[s("h2",[t._v("Детальная информация о контакте")]),s("router-link",{staticClass:"link",attrs:{to:"/"}},[t._v("На страницу контактов")])],1)},a=[],c=s("2877"),i={},l=Object(c["a"])(i,e,a,!1,null,"65045b4c",null);n["default"]=l.exports}}]);
+//# sourceMappingURL=chunk-2d22d746.46dcbde8.js.map
