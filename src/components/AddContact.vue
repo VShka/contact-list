@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
 export default {
   data() {
     return {
@@ -18,19 +19,18 @@ export default {
     }
   },
   methods: {
+    ...mapMutations(['addContact']),
     onSubmit() {
       if (this.name.trim()) {
-        const newContact = {
+        this.addContact({
           id: Date.now(),
           name: this.name,
           surname: '',
           email: '',
           tel: Number
-        };
-
-        this.$emit('add-contact', newContact);
+        })
         this.name = '';
-      };
+      }
     }
   }
 }

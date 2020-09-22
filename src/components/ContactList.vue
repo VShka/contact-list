@@ -1,7 +1,7 @@
 <template>
   <ul class="contact-list">
     <ContactItem 
-      v-for="(contact, i) in contacts"
+      v-for="(contact, i) in allContacts"
       :contact="contact"
       :index="i"
       :key="contact.id"
@@ -12,16 +12,21 @@
 
 <script>
 import ContactItem from './ContactItem';
+import { mapGetters, mapActions } from 'vuex';
 export default {
-  props: ['contacts'],
   components: {
     ContactItem
   },
   methods: {
+    ...mapActions(['fetchContacts']),
     removeContact(id) {
       this.$emit('remove-contact', id);
     }
-  }
+  },
+  async mounted() {
+    this.fetchContacts();
+  },
+  computed: mapGetters(['allContacts'])
 }
 </script>
 

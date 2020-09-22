@@ -3,9 +3,8 @@
   <section class="list">
     <h1>Список ваших контактов</h1>
     <hr>
-    <AddContact @add-contact="addContact" />
+    <AddContact />
     <ContactList 
-      :contacts="contacts"
       @remove-contact="removeContact"
     />
   </section>
@@ -17,23 +16,11 @@ import AddContact from '../components/AddContact';
 import ContactList from '../components/ContactList';
 
 export default {
-  data() {
-    return {
-      contacts: [
-        {id: 1, name: 'Victor', surname: '', email: '', tel: Number},
-        {id: 2, name: 'Polina', surname: '', email: '', tel: Number},
-        {id: 3, name: 'Bruno', surname: '', email: '', tel: Number}
-      ]
-    }
-  },
   components: {
     AddContact,
     ContactList
   },
   methods: {
-    addContact(contact) {
-      this.contacts.push(contact);
-    },
     removeContact(id) {
       const confirm = window.confirm("Точно удалить контакт?");
       
