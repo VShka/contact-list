@@ -1,10 +1,12 @@
 {
   "name": "contact-list",
+  "homepage": "https://vshka.github.io/contact-list",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "core-js": "^3.6.5",
