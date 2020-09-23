@@ -1,6 +1,10 @@
 export default {
   state: {
-    contacts: []
+    contacts: [
+      {id: 1, name: 'Victor', surname: 'Shkarupa', email: '', tel: ''},
+      {id: 2, name: 'Polina', surname: 'Shkarupa', email: '', tel: ''},
+      {id: 3, name: 'Bruno', surname: 'Shkarupa', email: '', tel: ''}
+    ]
   },
   getters: {
     allContacts(state) {
@@ -22,14 +26,5 @@ export default {
       state.contacts = contacts;
     }
   },
-  actions: {
-    async fetchContacts(context) {
-      const res = await fetch(
-        "https://jsonplaceholder.typicode.com/users?_limit=5"
-      );
-      const contacts = await res.json();
-
-      context.commit('updateContacts', contacts);
-    }
-  }
+  actions: {}
 }

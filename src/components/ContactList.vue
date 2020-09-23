@@ -12,19 +12,15 @@
 
 <script>
 import ContactItem from './ContactItem';
-import { mapGetters, mapActions } from 'vuex';
+import { mapGetters } from 'vuex';
 export default {
   components: {
     ContactItem
   },
   methods: {
-    ...mapActions(['fetchContacts']),
     removeContact(id) {
       this.$emit('remove-contact', id);
     }
-  },
-  async mounted() {
-    this.fetchContacts();
   },
   computed: mapGetters(['allContacts'])
 }
