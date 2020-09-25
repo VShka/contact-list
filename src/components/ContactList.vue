@@ -5,7 +5,6 @@
       :contact="contact"
       :index="i"
       :key="contact.id"
-      @remove-contact="removeContact"
     />
   </ul>
 </template>
@@ -16,11 +15,6 @@ import { mapGetters } from 'vuex';
 export default {
   components: {
     ContactItem
-  },
-  methods: {
-    removeContact(id) {
-      this.$emit('remove-contact', id);
-    }
   },
   computed: mapGetters(['allContacts'])
 }

@@ -4,9 +4,7 @@
     <h1>Список ваших контактов</h1>
     <hr>
     <AddContact />
-    <ContactList 
-      @remove-contact="removeContact"
-    />
+    <ContactList />
   </section>
 
 </template>
@@ -19,15 +17,6 @@ export default {
   components: {
     AddContact,
     ContactList
-  },
-  methods: {
-    removeContact(id) {
-      const confirm = window.confirm("Точно удалить контакт?");
-      
-      if (confirm) {
-        this.contacts = this.contacts.filter( contact => contact.id !== id);
-      }
-    }
   }
 }
 
