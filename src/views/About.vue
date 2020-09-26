@@ -48,7 +48,6 @@ export default {
   methods: {
     ...mapMutations(['updateContacts']),
 
-    // передаём в мутацию объект с новыми значениями
     getNewDetail() {
       this.updateContacts({
         name: this.detailContact.name,
