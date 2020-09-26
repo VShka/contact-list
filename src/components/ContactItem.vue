@@ -16,7 +16,7 @@
       </button>
       <button
         class="button button_delete"
-        v-on:click="remove"
+        v-on:click="removeElement"
       >
         Удалить
       </button>
@@ -26,13 +26,13 @@
 </template>
 
 <script>
-// import { mapMutations } from 'vuex'
+import { mapMutations } from 'vuex'
 export default {
   props: ['contact', 'index'],
   methods: {
-    // ...mapMutations(['removeContact']),
-    remove() {
-      this.$store.commit('removeContact', 25);
+    ...mapMutations(['removeContact']),
+    removeElement() {
+      this.removeContact(this.contact.id)
     }
   }
 }

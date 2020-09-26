@@ -16,12 +16,11 @@ export default {
       state.contacts.unshift(newContact);
     },
     removeContact(state, id) {
-      console.log(id);
-      // const confirm = window.confirm("Точно удалить контакт?");
+      const confirm = window.confirm("Точно удалить контакт?");
       
-      // if (confirm) {
-      //   state.contacts = state.contacts.filter( contact => contact.id !== id);
-      // }
+      if (confirm) {
+        state.contacts = state.contacts.filter( contact => contact.id !== id);
+      }
     },
     updateContacts(state, contacts) {
       state.contacts = contacts;
