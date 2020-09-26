@@ -32,7 +32,7 @@ export default {
           name: this.name,
           surname: '',
           email: '',
-          tel: Number
+          tel: null
         })
         // очищаем строку инпута от данных
         this.name = '';

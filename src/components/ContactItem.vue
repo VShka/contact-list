@@ -11,6 +11,7 @@
     <div class="control-container">
       <button
         class="button button_detail"
+        v-on:click="showDetailContact"
       >
         <router-link to="/about" class="link">Подробнее</router-link>
       </button>
@@ -32,13 +33,24 @@ export default {
   methods: {
 
     // получаем мутации через spread от store для изменения текущего state
-    ...mapMutations(['removeContact']),
+    ...mapMutations(['removeContact', 'getDetailContact']),
 
-    // используем метод компонента, который вешаем на обработчик клика по кнопке в template
+    // используем метод компонента, который вешаем на обработчик клика по кнопке Удалить в template
     removeElement() {
       
       // используем мутацию, полученную ранее, для изменения текущего state
-      this.removeContact(this.contact.id)
+      this.removeContact(this._getContactId());
+    },
+
+    // используем метод компонента, который вешаем на обработчик клика по кнопке Подробнее в template
+    showDetailContact() {
+      // передаём id в мутацию, чтобы перебрать массив по id и вывести подробную информацию искомого контакта
+      this.getDetailContact(this._getContactId());
+    },
+
+    // реализуем метод в рамках следования принципу DRY, отдающий нам id выбранного контакта
+    _getContactId() {
+      return this.contact.id;
     }
   }
 }
