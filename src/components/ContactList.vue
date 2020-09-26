@@ -16,6 +16,8 @@ export default {
   components: {
     ContactItem
   },
+
+  // вычисляем геттер для получения текущего state
   computed: mapGetters(['allContacts'])
 }
 </script>

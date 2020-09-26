@@ -19,9 +19,14 @@ export default {
     }
   },
   methods: {
+    // получаем мутации через spread от store для изменения текущего state
     ...mapMutations(['addContact']),
+
+    // используем метод компонента, который вешаем на обработчик submit формы в template
     onSubmit() {
+      // делаем проверку на входные данные, чтбы исключить добавления пустого элемента
       if (this.name.trim()) {
+        // используем мутацию, на вход принимает новый контакт в виде объекта
         this.addContact({
           id: Date.now(),
           name: this.name,
@@ -29,6 +34,7 @@ export default {
           email: '',
           tel: Number
         })
+        // очищаем строку инпута от данных
         this.name = '';
       }
     }

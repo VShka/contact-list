@@ -30,8 +30,14 @@ import { mapMutations } from 'vuex'
 export default {
   props: ['contact', 'index'],
   methods: {
+
+    // получаем мутации через spread от store для изменения текущего state
     ...mapMutations(['removeContact']),
+
+    // используем метод компонента, который вешаем на обработчик клика по кнопке в template
     removeElement() {
+      
+      // используем мутацию, полученную ранее, для изменения текущего state
       this.removeContact(this.contact.id)
     }
   }

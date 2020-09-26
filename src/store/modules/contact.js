@@ -7,11 +7,13 @@ export default {
     ]
   },
   getters: {
+    // геттер для получения текущего стейта
     allContacts(state) {
       return state.contacts;
     }
   },
   mutations: {
+    // мутации для изменения стейта
     addContact(state, newContact) {
       state.contacts.unshift(newContact);
     },
