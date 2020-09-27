@@ -57,7 +57,7 @@
       >
 
       <div class="button-container">
-        <button class="button button_prev">
+        <button class="button button_prev" v-on:click="prevStep">
           Отменить
         </button>
         
@@ -83,6 +83,10 @@ export default {
         email: this.detailContact.email,
         tel: this.detailContact.tel
       })
+    },
+
+    prevStep() {
+      document.execCommand("undo");
     }
   },
   computed: mapGetters(['detailContact'])
