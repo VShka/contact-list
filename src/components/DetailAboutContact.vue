@@ -29,11 +29,17 @@
       </p>
     </div>
 
-    <button class="button button_change" @click="showModal = true">
+    <button
+      class="button button_change"
+      @click="showModal = true"
+    >
       Редактировать
     </button>
 
-    <AddContactForm v-if="showModal" @close="showModal = false" />
+    <AddContactForm
+      v-if="showModal"
+      @close="showModal = false"
+    />
 
   </div>
 </template>
