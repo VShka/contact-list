@@ -31,7 +31,7 @@
         Отменить
       </button>
       
-      <button class="button button_save">
+      <button class="button button_save" @click="$emit('close')">
         Сохранить
       </button>
     </div>
