@@ -1,19 +1,14 @@
-# contact-list
+# Книга контактов
 
-## Project setup
-```
-yarn install
-```
+## Цель:
+Изучение и практика Vue.js, Vue-router, Vuex.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Функционал:
+- Добавить контакт
+- Перейти на страничку подробной информации о контакте
+- Редактировать контакт
+- Возможность отменить последнее дейстиве(аналог ctrl+z)
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## В планах: 
+- Подружить с БД
+- Улучшить UI/UX
